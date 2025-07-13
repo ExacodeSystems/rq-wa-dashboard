@@ -29,7 +29,7 @@ export default {
   appHeader: {
     display: "flex",
     justifyContent: "space-between",
-    backgroundColor: "#06033A",
+    backgroundColor: "#003131",
     padding: "20px 25px",
   },
   appLogoWrapper: {
@@ -47,7 +47,6 @@ export default {
     textAlign: "left",
     color: "#FFFFFF",
     lineHeight: "20px",
-    paddingLeft: "16px",
   } as CSSProperties,
   appLogoSubTitle: {
     fontSize: "12px",

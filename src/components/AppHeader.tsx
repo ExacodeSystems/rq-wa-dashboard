@@ -58,9 +58,6 @@ const AppHeader: React.FC<AppHeaderProps> = ({
   return (
     <div style={styles.appHeader}>
       <div style={styles.flex}>
-        <div style={styles.appLogoWrapper}>
-          <AppLogo />
-        </div>
         <div style={styles.appLogoTitle}>
           {LOGO_TITLE}
           <div style={styles.appLogoSubTitle}>{LOGO_SUB_TITLE}</div>
