@@ -128,7 +128,7 @@ export default {
     display: "flex",
     flexDirection: "column",
     height: "100%",
-    backgroundColor: "#001489",
+    backgroundColor: "#096060",
   } as CSSProperties,
   logo: {
     width: "42px",
@@ -184,7 +184,7 @@ export default {
     top: "50%",
     height: "50%",
     width: "100%",
-    backgroundColor: "#001489",
+    backgroundColor: "#096060",
     overflow: "hidden",
   } as CSSProperties,
   modalInputLabel: {

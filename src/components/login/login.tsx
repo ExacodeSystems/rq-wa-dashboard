@@ -86,17 +86,17 @@ const Login: React.FC<LoginProps> = (props: LoginProps) => {
             color="colorTextInverse"
           />
         </Box>
-        <div style={styles.loginTitle}>Twilio Conversations</div>
-        <div style={styles.subTitle}>Demo experience</div>
+        <div style={styles.loginTitle}>RQ Customer Service Dashboard</div>
+        <div style={styles.subTitle}>Sign in with your RQ CRM account.</div>
         <Box style={styles.loginForm}>
           <Box style={styles.userInput}>
             <ModalInputField
-              label="Username"
+              label="CRM Account Email"
               placeholder=""
               isFocused={true}
               error={
                 isFormDirty && !username.trim()
-                  ? "Enter a username to sign in."
+                  ? "Enter an email to sign in."
                   : ""
               }
               input={username}
@@ -154,7 +154,7 @@ const Login: React.FC<LoginProps> = (props: LoginProps) => {
           style={{
             height: "100%",
             width: "100%",
-            backgroundColor: "#06033a",
+            backgroundColor: "#003131",
             transform: "skewY(-12deg)",
             transformOrigin: "top right",
           }}
