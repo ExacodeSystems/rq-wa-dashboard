@@ -44,7 +44,7 @@ export default {
   appLogoTitle: {
     fontSize: "14px",
     fontWeight: 600,
-    textAlign: "center",
+    textAlign: "left",
     color: "#FFFFFF",
     lineHeight: "20px",
     paddingLeft: "16px",
@@ -75,7 +75,7 @@ export default {
     lineHeight: "20px",
     fontWeight: "400",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "end",
   } as CSSProperties,
   paginationSpinner: {
     display: "flex",

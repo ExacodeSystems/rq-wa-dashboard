@@ -1,16 +1,15 @@
-import { Avatar } from "./Avatar";
 import { Text } from "@twilio-paste/core";
-import { Menu, MenuButton, useMenuState, MenuItem } from "@twilio-paste/menu";
-import { ChevronDownIcon } from "@twilio-paste/icons/esm/ChevronDownIcon";
-import React, { useMemo, useState } from "react";
-import styles from "../styles";
+import { Menu, MenuButton, MenuItem, useMenuState } from "@twilio-paste/menu";
 import { Client, ConnectionState, User } from "@twilio/conversations";
-import UserProfileModal from "./modals/UserProfileModal";
+import React, { useMemo, useState } from "react";
+import { useSelector } from "react-redux";
 import { readUserProfile } from "../api";
 import { AppLogo, LOGO_SUB_TITLE, LOGO_TITLE } from "../branding";
-import { useSelector } from "react-redux";
 import { AppState } from "../store";
+import styles from "../styles";
 import { getTranslation } from "./../utils/localUtils";
+import { Avatar } from "./Avatar";
+import UserProfileModal from "./modals/UserProfileModal";
 
 type AppHeaderProps = {
   user: string;
@@ -68,10 +67,10 @@ const AppHeader: React.FC<AppHeaderProps> = ({
         </div>
       </div>
       <div style={styles.userTile}>
-        <Avatar name={user} />
         <div
           style={{
             padding: "0 10px",
+            textAlign: "right",
           }}
         >
           <Text as="span" style={styles.userName}>
@@ -96,11 +95,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({
           </Text>
         </div>
         <MenuButton {...menu} variant="link" size="reset">
-          <ChevronDownIcon
-            color="colorTextInverse"
-            decorative={false}
-            title="Settings"
-          />
+          <Avatar name={user} />
         </MenuButton>
         <Menu {...menu} aria-label="Preferences">
           <MenuItem {...menu} onClick={onSignOut}>
