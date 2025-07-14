@@ -4,7 +4,7 @@ import { Client, ConnectionState, User } from "@twilio/conversations";
 import React, { useMemo, useState } from "react";
 import { useSelector } from "react-redux";
 import { readUserProfile } from "../api";
-import { AppLogo, LOGO_SUB_TITLE, LOGO_TITLE } from "../branding";
+import { LOGO_SUB_TITLE, LOGO_TITLE } from "../branding";
 import { AppState } from "../store";
 import styles from "../styles";
 import { getTranslation } from "./../utils/localUtils";
