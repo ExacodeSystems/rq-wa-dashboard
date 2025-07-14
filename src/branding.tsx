@@ -2,9 +2,9 @@ import { LogoTwilioIcon } from "@twilio-paste/icons/esm/LogoTwilioIcon";
 import React from "react";
 import { IconSize, TextColor } from "@twilio-paste/style-props";
 
-export const LOGO_TITLE = "Twilio Conversations";
-export const LOGO_SUB_TITLE = "Demo application";
-export const APP_TITLE = "Conversations Demo";
+export const LOGO_TITLE = "RQing Customer Service";
+export const LOGO_SUB_TITLE = "Customer Service Dashboard for RQing";
+export const APP_TITLE = "RQ WhatsApp Conversations";
 
 interface LogoTwilioIconProps {
   decorative?: boolean;

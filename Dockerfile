@@ -8,10 +8,11 @@ RUN mkdir $BASE_DIR
 COPY .eslintrc.json $BASE_DIR
 COPY tsconfig.json $BASE_DIR
 COPY webpack.config.js $BASE_DIR
-COPY .env $BASE_DIR
+# COPY .env $BASE_DIR
 COPY public $BASE_DIR/public
 COPY yarn.lock $BASE_DIR
 COPY package.json $BASE_DIR
+COPY src $BASE_DIR/src
 
 WORKDIR $BASE_DIR
 # Install project dependencies

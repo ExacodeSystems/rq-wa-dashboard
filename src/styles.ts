@@ -29,7 +29,7 @@ export default {
   appHeader: {
     display: "flex",
     justifyContent: "space-between",
-    backgroundColor: "#06033A",
+    backgroundColor: "#003131",
     padding: "20px 25px",
   },
   appLogoWrapper: {
@@ -44,10 +44,9 @@ export default {
   appLogoTitle: {
     fontSize: "14px",
     fontWeight: 600,
-    textAlign: "center",
+    textAlign: "left",
     color: "#FFFFFF",
     lineHeight: "20px",
-    paddingLeft: "16px",
   } as CSSProperties,
   appLogoSubTitle: {
     fontSize: "12px",
@@ -75,7 +74,7 @@ export default {
     lineHeight: "20px",
     fontWeight: "400",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "end",
   } as CSSProperties,
   paginationSpinner: {
     display: "flex",
@@ -128,7 +127,7 @@ export default {
     display: "flex",
     flexDirection: "column",
     height: "100%",
-    backgroundColor: "#001489",
+    backgroundColor: "#096060",
   } as CSSProperties,
   logo: {
     width: "42px",
@@ -184,7 +183,7 @@ export default {
     top: "50%",
     height: "50%",
     width: "100%",
-    backgroundColor: "#001489",
+    backgroundColor: "#096060",
     overflow: "hidden",
   } as CSSProperties,
   modalInputLabel: {
