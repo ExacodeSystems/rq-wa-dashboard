@@ -16,7 +16,8 @@ try {
   app = initializeApp((window as any).firebaseConfig);
   messaging = getMessaging(app);
   initialized = true;
-} catch {
+} catch (e) {
+  console.error("Firebase initialization error", e);
   console.warn("Couldn't initialize firebase app");
 }
 

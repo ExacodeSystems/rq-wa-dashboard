@@ -122,9 +122,11 @@ const AppContainer: React.FC = () => {
 
     const fcmInit = async () => {
       await subscribeFcmNotifications(client);
+      console.log("FCM subscription completed");
     };
 
-    fcmInit().catch(() => {
+    fcmInit().catch((e) => {
+      console.error("FCM subscription failed", e, typeof e);
       console.error(
         "FCM initialization failed: no push notifications will be available"
       );
