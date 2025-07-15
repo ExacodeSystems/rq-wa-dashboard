@@ -1,4 +1,4 @@
-import { Button, Text } from "@twilio-paste/core";
+import { Text } from "@twilio-paste/core";
 import { Menu, MenuButton, MenuItem, useMenuState } from "@twilio-paste/menu";
 import { Client, ConnectionState, User } from "@twilio/conversations";
 import React, { useMemo, useState } from "react";
@@ -55,15 +55,15 @@ const AppHeader: React.FC<AppHeaderProps> = ({
     setUserProfileModal(true);
   };
 
-  const handleAllowNotificationPermissions = async () => {
-    const permission = await Notification.requestPermission();
-    console.log("Notification permission requested");
-    if (permission !== "granted") {
-      alert(
-        "You need to allow notification permissions to receive updates from the app."
-      );
-    }
-  };
+  // const handleAllowNotificationPermissions = async () => {
+  //   const permission = await Notification.requestPermission();
+  //   console.log("Notification permission requested");
+  //   if (permission !== "granted") {
+  //     alert(
+  //       "You need to allow notification permissions to receive updates from the app."
+  //     );
+  //   }
+  // };
 
   return (
     <div style={styles.appHeader}>
@@ -74,7 +74,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({
         </div>
       </div>
       <div style={styles.userTile}>
-        {Notification.permission !== "granted" && (
+        {/* {Notification.permission !== "granted" && (
           <Button
             variant="secondary"
             size="small"
@@ -82,7 +82,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({
           >
             Allow Notification Permissions
           </Button>
-        )}
+        )} */}
         <div
           style={{
             padding: "0 10px",
