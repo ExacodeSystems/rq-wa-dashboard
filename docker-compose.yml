@@ -1,8 +1,20 @@
+name: rq_wa_dashboard
+
 services:
   app:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      platforms:
+        - linux/arm64
+      args: 
+        - REACT_APP_ACCESS_TOKEN_SERVICE_URL=${REACT_APP_ACCESS_TOKEN_SERVICE_URL}
+    container_name: rq_wa_dashboard_app
+    restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "${EXPOSE_PORT}:3000"
+    env_file:
+      - .env
     volumes:
       # Source dir is mounted (instead of copying) to enable Webpack's hot reload feature
       - "./src:/opt/demo-app/src"
