@@ -1,4 +1,4 @@
-name: rq_wa_dashboard
+name: rq_whatsapp_cs_dashboard
 
 services:
   app:
@@ -9,7 +9,7 @@ services:
         - linux/arm64
       args: 
         - REACT_APP_ACCESS_TOKEN_SERVICE_URL=${REACT_APP_ACCESS_TOKEN_SERVICE_URL}
-    container_name: rq_wa_dashboard_app
+    container_name: rq_whatsapp_cs_dashboard
     restart: unless-stopped
     ports:
       - "${EXPOSE_PORT}:3000"
