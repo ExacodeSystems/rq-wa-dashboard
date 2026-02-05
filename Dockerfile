@@ -1,6 +1,8 @@
 FROM node:19-alpine
 
 ARG BASE_DIR=/opt/demo-app
+ARG REACT_APP_ACCESS_TOKEN_SERVICE_URL
+ENV REACT_APP_ACCESS_TOKEN_SERVICE_URL=$REACT_APP_ACCESS_TOKEN_SERVICE_URL
 RUN mkdir $BASE_DIR
 
 # All other files are ignored by default via .dockerignore to avoid unnecessarily inflating the Docker context
@@ -8,7 +10,7 @@ RUN mkdir $BASE_DIR
 COPY .eslintrc.json $BASE_DIR
 COPY tsconfig.json $BASE_DIR
 COPY webpack.config.js $BASE_DIR
-# COPY .env $BASE_DIR
+COPY .env $BASE_DIR
 COPY public $BASE_DIR/public
 COPY yarn.lock $BASE_DIR
 COPY package.json $BASE_DIR
